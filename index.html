@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#05060b">
+  <title>NOVA NEXUS — Digital Universe</title>
+  <meta name="description" content="NOVA NEXUS — an interactive digital universe built by 4tvibez.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="space"></canvas>
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">N</span><span>NOVA <b>NEXUS</b></span></div>
+    <div class="system-pill"><i></i><span id="systemState">NEXUS ONLINE</span></div>
+    <button class="icon-btn" id="soundBtn" aria-label="Toggle sound">◉</button>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow">INTERACTIVE DIGITAL UNIVERSE <span>/// 01</span></div>
+      <h1>ENTER THE<br><em>NEXUS.</em></h1>
+      <p class="intro">A living interface where code becomes atmosphere. Explore the nodes, trigger hidden systems, and see what the machine is hiding.</p>
+      <div class="hero-actions">
+        <button class="primary" id="enterBtn">ENTER NEXUS <span>→</span></button>
+        <button class="ghost" id="randomBtn">SURPRISE ME <span>✦</span></button>
+      </div>
+    </section>
+
+    <section class="hud">
+      <div class="hud-card">
+        <span>CORE</span><strong id="coreValue">98.7%</strong><small>STABLE</small>
+      </div>
+      <div class="hud-card">
+        <span>ENERGY</span><strong id="energyValue">7.42</strong><small>GW</small>
+      </div>
+      <div class="hud-card">
+        <span>VISITORS</span><strong id="visitorValue">001,284</strong><small>ACTIVE</small>
+      </div>
+    </section>
+
+    <section class="command-panel" id="nexusPanel">
+      <div class="panel-head">
+        <div><span class="live-dot"></span> NEXUS COMMAND</div>
+        <span id="clock">00:00:00 UTC</span>
+      </div>
+      <div class="terminal" id="terminal">
+        <div class="line muted">NOVA NEXUS // secure channel established</div>
+        <div class="line">Type <b>help</b> to discover available commands.</div>
+      </div>
+      <form id="commandForm" class="command-form">
+        <span>&gt;</span><input id="commandInput" autocomplete="off" placeholder="type a command..." aria-label="Nexus command"><button>RUN</button>
+      </form>
+    </section>
+
+    <section class="nodes">
+      <div class="section-title"><span>DISCOVER</span><b>LIVE NODES</b><i></i></div>
+      <div class="node-grid">
+        <button class="node" data-node="void"><span class="node-icon">◈</span><div><b>THE VOID</b><small>Unknown space</small></div><strong>01</strong></button>
+        <button class="node" data-node="pulse"><span class="node-icon">⌁</span><div><b>PULSE ENGINE</b><small>Reactive core</small></div><strong>02</strong></button>
+        <button class="node" data-node="archive"><span class="node-icon">▣</span><div><b>MEMORY VAULT</b><small>Hidden fragments</small></div><strong>03</strong></button>
+        <button class="node" data-node="signal"><span class="node-icon">⌁</span><div><b>DEEP SIGNAL</b><small>Incoming transmission</small></div><strong>04</strong></button>
+      </div>
+    </section>
+  </main>
+
+  <div class="overlay" id="overlay" aria-hidden="true">
+    <div class="modal">
+      <button class="close" id="closeModal">×</button>
+      <div class="modal-kicker" id="modalKicker">NODE 01</div>
+      <h2 id="modalTitle">THE VOID</h2>
+      <p id="modalText"></p>
+      <div class="meter"><span id="meterBar"></span></div>
+      <div class="modal-meta"><span id="modalMeta"></span><b id="modalValue"></b></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <footer>BUILT WITH HTML · CSS · JAVASCRIPT <span>•</span> 4TVIBEZ / 2026</footer>
+  <script src="app.js"></script>
+</body>
+</html>
